@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", serif;
+  color: #33393e;
+  scroll-behavior: smooth;
+}
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.landing {
+  background-color: #f7fff7;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: -100px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 175px;
+  width: 175px;
+}
+
+.name {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.content {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 110px;
+  margin: 10px;
+}
+
+.subtitle {
+  font-size: 80px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+.nav a {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #33393e;
+  text-decoration: black;
+  font-size: 18px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.highlight {
+  color: #fff;
+}
+
+.highlight-pink {
+  color: #ffb2e6;
+}
+/* About */
+.about {
+  background-image: url("asset/img1.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.about-content {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(51, 57, 62, 0.8);
+  padding: 30px;
+  max-width: 90%;
+  width: 400px;
+  color: rgba(247, 255, 247, 0.9);
+  z-index: 2;
+}
+
+.about-content h2 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.know-more {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.know-more:after {
+  content: " →";
+}
+
+/* Skills */
+.skills {
+  background-color: #33393e;
+  color: #f7fff7;
+  padding: 40px 20px;
+}
+
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  width: 45%; /* Ensures the categories take 45% of the width for a two-column layout */
+  margin-bottom: 30px;
+}
+
+.skill-category h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #f7fff7;
+}
+
+.skill-category ul {
+  list-style-type: circle; /* Adds circles as bullets for the list items */
+  padding-left: 20px; /* Adds padding to ensure the bullets are indented properly */
+}
+
+.skill-category li {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Project heading */
+.projects {
+  background-color: #fff;
+  color: #33393e;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f7fff7;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.projects-content {
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.projects h1 {
+  font-size: 72px;
+  margin-bottom: 20px;
+  color: #33393e;
+}
+
+.projects .subtitle {
+  font-size: 24px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+figure {
+  display: grid;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #33393e;
+}
+
+figure a {
+  text-decoration: none;
+}
+
+figure > * {
+  grid-area: 1/1;
+  transition: 0.4s;
+}
+
+figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+figure figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem;
+  font-family: sans-serif;
+  color: transparent;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: inset(0 var(--_i, 100%) 0 0);
+  transition: clip-path 0.4s, color 0.4s;
+}
+
+figure figcaption p {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #fff;
+  text-align: left;
+}
+
+figure figcaption h2 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+  text-align: left;
+}
+
+figure:hover figcaption {
+  --_i: 0%;
+  color: #fff;
+}
+
+figure:hover img {
+  transform: scale(1.2);
+}
+
+@supports not (-webkit-mask-clip: text) {
+  figure figcaption {
+    -webkit-mask: none;
+    color: #fff;
+  }
+}
+
+/* Contact me */
+.contact {
+  background-color: #33393e;
+  color: white;
+  padding: 10px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 800px;
+  width: 100%;
+}
+
+.contact-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 140px;
+}
+
+.stay-in-touch {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.social-section {
+  font-size: 18px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.or {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.email a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.email a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .projects h1 {
+    font-size: 56px;
+  }
+
+  .projects .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 80px;
+  }
+  .subtitle {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+  .subtitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+  .subtitle {
+    font-size: 24px;
+  }
+  .logo,
+  .name {
+    font-size: 16px;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav a {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    background-image: url("asset/img1-medium.jpg");
+  }
+
+  .about-content {
+    width: 350px;
+  }
+
+  .about-content h2 {
+    font-size: 56px;
+  }
+
+  .about-content p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    background-image: url("asset/img1-small.jpg");
+  }
+
+  .about-content {
+    width: 300px;
+    padding: 25px;
+  }
+
+  .about-content h2 {
+    font-size: 48px;
+  }
+
+  .about-content p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .about-content h2 {
+    font-size: 36px;
+  }
+
+  .about-content p {
+    font-size: 18px;
+  }
+
+  .know-more {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-category {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-category h2 {
+    font-size: 28px;
+  }
+
+  .skill-category li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects h1 {
+    font-size: 56px;
+  }
+
+  .projects .subtitle {
+    font-size: 20px;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects h1 {
+    font-size: 40px;
+  }
+
+  .projects .subtitle {
+    font-size: 18px;
+  }
+
+  figure figcaption h2 {
+    font-size: 1.8rem;
+  }
+
+  figure figcaption p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 36px;
+  }
+
+  .stay-in-touch {
+    font-size: 28px;
+  }
+
+  .social-icons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
